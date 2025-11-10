@@ -3,22 +3,22 @@
 // ============================================================================
 //        
 // ============================================================================
-
+//
 #include <stdio.h>
 #include <string.h>
 
 // Quantos territórios serão cadastrados
 #define QTD_TERRITORIOS 5
 
-// Estrutura de um território
-struct Territorio {
+// Estrutura de um território usando typedef
+typedef struct {
     char nome[50];
     char cor[20];
     int tropas;
-};
+} Territorio;
 
 int main() {
-    struct Territorio t[QTD_TERRITORIOS];
+    Territorio t[QTD_TERRITORIOS]; // Array de territórios
     int i;
 
     printf("=== Cadastro de Territorios ===\n");
@@ -45,4 +45,3 @@ int main() {
     }
 
     return 0;
-}
