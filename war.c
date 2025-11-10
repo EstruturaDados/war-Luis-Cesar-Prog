@@ -7,39 +7,18 @@
 #include <stdio.h>
 #include <string.h>
 
-// Definição da struct Territorio
+// Quantos territórios serão cadastrados
+#define QTD_TERRITORIOS 5
 
-typedef struct {
-    "configurations": [
-    {
-        "name": "(gdb) Anexar",
-        "type": "cppdbg",
-        "request": "attach",
-        "program": "insira o nome do programa, por exemplo ${workspaceFolder}/a.out",
-        "MIMode": "gdb",
-        "setupCommands": [
-            {
-                "description": "Habilitar a reformatação automática para gdb",
-                "text": "-enable-pretty-printing",
-                "ignoreFailures": true
-            },
-            {
-                "description": "Definir Tipo de Desmontagem como Intel",
-                "text": "-gdb-set disassembly-flavor intel",
-                "ignoreFailures": true
-            }
-        ]
-    }
-    ]
-
-    char nome [50];
-    char cor [20];
+// Estrutura de um território
+struct Territorio {
+    char nome[50];
+    char cor[20];
     int tropas;
-    
-} Territorio;
+};
 
 int main() {
-    struct Territorio;
+    struct Territorio t[QTD_TERRITORIOS];
     int i;
 
     printf("=== Cadastro de Territorios ===\n");
@@ -67,4 +46,3 @@ int main() {
 
     return 0;
 }
-
